@@ -363,7 +363,12 @@ document.querySelectorAll('.rv').forEach(el => io.observe(el));
     wrap(c, sel.map(i => NOTES[i].line).join(' '), 120, y + 40, W - 240, 42);
     c.textAlign = 'center'; c.fillStyle = '#f4efe6'; c.font = 'italic 40px "Instrument Serif"'; c.fillText('Ezaldeen “Ez” Abushaar', W / 2, H - 150);
     c.fillStyle = '#9a9388'; c.font = '22px "Space Grotesk"'; c.fillText('BUSINESS DEVELOPMENT & MARKETING · INDIANAPOLIS', W / 2, H - 105);
-    const a = document.createElement('a'); a.download = `ez-no-${no}.png`; a.href = cv.toDataURL('image/png'); a.click();
+    const fname = `ez-no-${no}.png`;
+    cv.toBlob(async blob => {
+      const dlc = window.claude && window.claude.use ? await window.claude.use('downloads').catch(() => null) : null;
+      if (dlc) { try { await dlc.save({ filename: fname, data: blob }); } catch (e) { if (e && e.code !== 'declined') rule.textContent = 'The card could not be saved here.'; } return; }
+      const a = document.createElement('a'); a.download = fname; a.href = URL.createObjectURL(blob); a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    }, 'image/png');
   };
 })();
 </script>
