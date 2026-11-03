@@ -3,187 +3,369 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ez Abushaar — Business Development & Marketing</title>
-<meta name="description" content="Ezaldeen “Ez” Abushaar — business development and marketing professional in Indianapolis. Wholesale, e-commerce, brand growth, and AI-enabled operations.">
+<title>Ez — A Fragrance in Four Notes</title>
+<meta name="description" content="Ezaldeen “Ez” Abushaar, business development and marketing professional in Indianapolis, presented as a perfume. Formulate your own hire.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&family=Reem+Kufi:wght@700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#ece8df;--ink:#111;--muted:#6b665c;--acc:#ff3d00;--line:#111}
+:root{--bg:#0b0a0f;--ink:#f4efe6;--muted:#9a9388;--gold:#e8b04b;--rose:#e86a5a;--line:rgba(244,239,230,.12)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font:17px/1.5 "Space Grotesk",system-ui,sans-serif;overflow-x:hidden}
-@media(hover:hover){body,a{cursor:none}}
-a{color:inherit;text-decoration:none}
-.big{font-family:Anton,Impact,sans-serif;text-transform:uppercase;line-height:.86;letter-spacing:-.01em}
-.pad{padding:0 clamp(16px,3vw,40px)}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 "Space Grotesk",system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+.serif{font-family:"Instrument Serif",serif;font-weight:400}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+#trail{position:fixed;inset:0;pointer-events:none;z-index:50}
 
-/* cursor */
-#cur{position:fixed;left:0;top:0;width:14px;height:14px;border-radius:50%;background:var(--acc);pointer-events:none;z-index:100;
-  transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s;mix-blend-mode:multiply}
-#cur.on{width:70px;height:70px}
-@media(hover:none){#cur{display:none}}
+header{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:18px 24px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;mix-blend-mode:difference}
+header nav{display:flex;gap:22px}header a{text-decoration:none;opacity:.8}header a:hover{opacity:1}
+@media(max-width:640px){header nav{display:none}}
 
-header{display:flex;justify-content:space-between;align-items:center;height:64px;border-bottom:2px solid var(--line);font-weight:500;font-size:14px;text-transform:uppercase;letter-spacing:.04em}
-header nav{display:flex;gap:24px}
-header a:hover{color:var(--acc)}
-.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--acc);margin-right:8px;animation:p 1.6s infinite}
-@keyframes p{50%{opacity:.25}}
-@media(max-width:600px){header nav{display:none}}
+/* HERO */
+.hero{position:relative;height:100svh;min-height:560px;overflow:hidden}
+#smoke{position:absolute;inset:0;width:100%;height:100%}
+.hero .cap{position:absolute;left:0;right:0;bottom:7vh;text-align:center;padding:0 20px;pointer-events:none}
+.hero .cap p:first-child{font-size:clamp(26px,4vw,46px);line-height:1.1}
+.hero .cap p:first-child em{color:var(--gold)}
+.hero .cap small{display:block;margin-top:14px;color:var(--muted);font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.hint{position:absolute;top:50%;right:24px;writing-mode:vertical-rl;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+@media(max-width:640px){.hint{display:none}}
 
-.hero{min-height:calc(100svh - 64px);display:flex;flex-direction:column;justify-content:space-between;padding-top:4vh;padding-bottom:4vh}
-.hero h1{font-size:clamp(80px,21vw,340px)}
-.hero h1 span{display:block;overflow:hidden}
-.hero h1 span i{display:block;font-style:normal;transform:translateY(105%);animation:up 1s cubic-bezier(.2,.8,.2,1) forwards}
-.hero h1 span:nth-child(2) i{animation-delay:.12s;color:var(--acc)}
-@keyframes up{to{transform:none}}
-.hero-foot{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;border-top:2px solid var(--line);padding-top:20px}
-.hero-foot p{max-width:520px;font-size:clamp(17px,1.6vw,21px)}
-.hero-foot .r{text-align:right;text-transform:uppercase;font-size:13px;letter-spacing:.06em;color:var(--muted)}
-@media(max-width:700px){.hero-foot{grid-template-columns:1fr}.hero-foot .r{text-align:left}}
+section{padding:clamp(90px,12vw,160px) 0;border-top:1px solid var(--line)}
+.kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(42px,7vw,96px);line-height:.98;letter-spacing:-.01em}
+h2 i{color:var(--gold)}
+.intro{max-width:620px;color:var(--muted);margin-top:22px;font-size:18px}
 
-.marquee{background:var(--ink);color:var(--bg);overflow:hidden;white-space:nowrap;padding:18px 0;border-block:2px solid var(--line)}
-.track{display:inline-flex;animation:m 26s linear infinite}
-.track span{font-family:Anton,sans-serif;text-transform:uppercase;font-size:clamp(34px,5vw,64px);padding-right:40px}
-.track span b{color:var(--acc);font-weight:400}
-@keyframes m{to{transform:translateX(-50%)}}
+/* PYRAMID */
+.pyr{margin-top:70px;display:grid;gap:18px}
+.tier{display:grid;grid-template-columns:220px 1fr;gap:30px;padding:34px 0;border-top:1px solid var(--line);transition:filter .2s,opacity .2s,transform .2s;will-change:filter,opacity,transform}
+@media(max-width:760px){.tier{grid-template-columns:1fr;gap:14px}}
+.tier h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:34px;line-height:1}
+.tier h3 small{display:block;font-family:"Space Grotesk";font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start}
+.chip{border:1px solid var(--line);padding:9px 16px;border-radius:99px;font-size:15px}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.note{border:1px solid var(--line);border-radius:16px;padding:22px;background:linear-gradient(160deg,rgba(255,255,255,.03),transparent)}
+.note b{display:block;font-family:"Instrument Serif",serif;font-weight:400;font-size:26px;margin-bottom:2px}
+.note span{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.note p{color:var(--muted);font-size:15px}
 
-section{padding-top:clamp(70px,10vw,140px);padding-bottom:clamp(70px,10vw,140px)}
-.label{display:flex;justify-content:space-between;text-transform:uppercase;font-size:13px;letter-spacing:.08em;border-bottom:2px solid var(--line);padding-bottom:12px;margin-bottom:40px}
-.label b{color:var(--acc)}
-.about h2{font-size:clamp(34px,5.4vw,84px);font-family:Anton,sans-serif;text-transform:uppercase;line-height:.95;max-width:15ch}
-.about h2 em{font-style:normal;color:var(--acc)}
-.cols{display:grid;grid-template-columns:repeat(4,1fr);margin-top:60px;border-top:2px solid var(--line)}
-.cols div{padding:24px 20px 0 0;border-right:2px solid var(--line);padding-left:20px}
-.cols div:first-child{padding-left:0}.cols div:last-child{border:0}
-.cols h3{font-size:15px;text-transform:uppercase;letter-spacing:.05em;margin:10px 0 8px}
-.cols p{color:var(--muted);font-size:15px}
-.cols .n{font-family:Anton,sans-serif;font-size:40px;color:var(--acc)}
-@media(max-width:860px){.cols{grid-template-columns:1fr 1fr}.cols div{border-right:0;padding-left:0;border-bottom:2px solid var(--line);padding-bottom:24px}}
-@media(max-width:520px){.cols{grid-template-columns:1fr}}
+/* LAB */
+.lab{display:grid;grid-template-columns:1fr 360px;gap:60px;margin-top:70px;align-items:start}
+@media(max-width:900px){.lab{grid-template-columns:1fr}}
+.picker{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.picker{grid-template-columns:1fr}}
+.pick{all:unset;cursor:pointer;display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:14px;padding:18px;transition:.25s;font-size:16px}
+.pick i{width:16px;height:16px;border-radius:50%;background:var(--c);box-shadow:0 0 0 4px rgba(255,255,255,.04);flex:none;transition:.25s}
+.pick:hover{border-color:rgba(244,239,230,.35)}
+.pick[aria-pressed=true]{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.pick[aria-pressed=true] i{box-shadow:0 0 18px 4px var(--c)}
+.pick:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.rule{margin-top:14px;color:var(--muted);font-size:14px}
+.pitch{margin-top:34px;min-height:150px}
+.pitch h4{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(30px,4vw,44px);line-height:1.05}
+.pitch h4 em{color:var(--gold)}
+.pitch p{color:var(--muted);margin-top:14px;max-width:560px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{all:unset;cursor:pointer;padding:13px 22px;border-radius:99px;font-weight:500;font-size:15px;transition:.2s}
+.btn.solid{background:var(--gold);color:#1b1205}.btn.solid:hover{filter:brightness(1.1)}
+.btn.ghost{border:1px solid var(--line)}.btn.ghost:hover{border-color:var(--gold)}
+.btn[disabled]{opacity:.35;pointer-events:none}
+.btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
-.row{display:grid;grid-template-columns:70px 1fr auto;gap:20px;align-items:center;border-bottom:2px solid var(--line);padding:26px 0;position:relative;transition:padding .35s}
-.row:first-of-type{border-top:2px solid var(--line)}
-.row .i{font-size:14px;color:var(--muted)}
-.row h3{font-size:clamp(40px,7.5vw,118px);transition:color .3s,transform .35s}
-.row .t{text-transform:uppercase;font-size:13px;letter-spacing:.06em;text-align:right;max-width:240px}
-.row .d{grid-column:2/4;max-height:0;overflow:hidden;transition:max-height .5s ease,opacity .4s;opacity:0}
-.row .d ul{list-style:none;display:grid;gap:6px;padding-top:14px;max-width:780px}
-.row .d li::before{content:"→ ";color:var(--acc)}
-.row:hover h3,.row.open h3{color:var(--acc);transform:translateX(12px)}
-.row:hover .d,.row.open .d{max-height:320px;opacity:1}
-@media(max-width:700px){.row{grid-template-columns:1fr}.row .t{text-align:left}.row .d{grid-column:1;max-height:none;opacity:1}}
+.bottle-wrap{position:sticky;top:90px;display:flex;flex-direction:column;align-items:center}
+.cap-top{width:70px;height:46px;border-radius:8px 8px 4px 4px;background:linear-gradient(90deg,#8a6a2a,#e8b04b 45%,#8a6a2a)}
+.neck{width:38px;height:22px;background:rgba(244,239,230,.15);border-left:1px solid rgba(244,239,230,.3);border-right:1px solid rgba(244,239,230,.3)}
+.bottle{position:relative;width:250px;height:330px;border-radius:44px 44px 56px 56px;border:1.5px solid rgba(244,239,230,.35);overflow:hidden;
+  background:linear-gradient(110deg,rgba(255,255,255,.08),rgba(255,255,255,.01) 40%,rgba(255,255,255,.06));box-shadow:inset 0 0 40px rgba(255,255,255,.04)}
+.liquid{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column-reverse}
+.layer{height:0;transition:height 1s cubic-bezier(.3,1.3,.4,1);position:relative}
+.layer::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.18),transparent 40%,rgba(255,255,255,.12) 70%,rgba(0,0,0,.15))}
+.wave{position:absolute;left:-50%;width:200%;height:24px;border-radius:40%;background:rgba(255,255,255,.18);animation:wv 5s linear infinite;transition:bottom 1s cubic-bezier(.3,1.3,.4,1)}
+@keyframes wv{to{transform:translateX(25%) rotate(360deg)}}
+.label{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:170px;padding:16px 10px;text-align:center;background:rgba(11,10,15,.82);border:1px solid rgba(232,176,75,.6);border-radius:4px;z-index:2;backdrop-filter:blur(4px)}
+.label .no{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.label .nm{font-family:"Instrument Serif",serif;font-size:24px;line-height:1.05;margin:6px 0}
+.label .ar{font-family:"Reem Kufi",sans-serif;font-size:18px;color:var(--gold)}
+.shine{position:absolute;top:20px;left:26px;width:22px;height:190px;border-radius:20px;background:linear-gradient(rgba(255,255,255,.35),transparent);z-index:3}
+.bubbles{position:absolute;inset:0;z-index:1;pointer-events:none}
+.bubbles span{position:absolute;bottom:-10px;width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.35);animation:bb linear infinite}
+@keyframes bb{to{transform:translateY(-340px);opacity:0}}
 
-.skills{display:flex;flex-wrap:wrap;gap:0}
-.skills span{font-family:Anton,sans-serif;text-transform:uppercase;font-size:clamp(26px,3.6vw,52px);padding:4px 18px 4px 0;line-height:1.1;transition:color .2s}
-.skills span:after{content:" /";color:var(--acc)}
-.skills span:hover{color:var(--acc)}
+/* BASE / CONTACT */
+.contact{text-align:center}
+.contact h2{font-size:clamp(54px,11vw,160px)}
+.contact .intro{margin:22px auto 0}
+.contact .actions{justify-content:center}
+footer{padding:30px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 
-.contact{background:var(--acc);color:var(--ink);border-top:2px solid var(--line)}
-.contact .label{border-color:var(--ink)}
-.contact h2{font-size:clamp(70px,17vw,280px)}
-.contact a.go{display:inline-flex;align-items:center;gap:14px;margin-top:40px;font-size:clamp(20px,2.4vw,30px);font-weight:700;border-bottom:3px solid var(--ink);padding-bottom:4px}
-.contact a.go:hover{gap:26px}
-footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:22px;padding-bottom:22px;font-size:13px;text-transform:uppercase;letter-spacing:.06em;background:var(--ink);color:var(--bg)}
-
-.rv{opacity:0;transform:translateY(40px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.8,.2,1)}
 .rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero h1 span i{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<div id="cur"></div>
+<canvas id="trail" aria-hidden="true"></canvas>
 
-<header class="pad">
-  <a href="#top"><span class="dot"></span>Ez Abushaar</a>
-  <nav><a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
-  <span>Indianapolis, IN</span>
+<header>
+  <a href="#top">Ez · عز</a>
+  <nav><a href="#formula">The formula</a><a href="#lab">Formulate a hire</a><a href="#contact">Contact</a></nav>
 </header>
 
 <main id="top">
-<div class="hero pad">
-  <h1 class="big"><span><i>Who is</i></span><span><i>Ez?</i></span></h1>
-  <div class="hero-foot">
-    <p>Ezaldeen “Ez” Abushaar is a business development and marketing professional who connects strategy with execution, from the warehouse floor to the TikTok feed.</p>
-    <div class="r">Business development<br>Marketing · E-commerce<br>Arabic / English</div>
+<div class="hero">
+  <h1 class="sr">Ez Abushaar: business development and marketing professional</h1>
+  <canvas id="smoke" aria-hidden="true"></canvas>
+  <div class="cap">
+    <p class="serif">Same person. <em>Two alphabets.</em></p>
+    <small>Ezaldeen “Ez” Abushaar · Business development & marketing · Indianapolis</small>
   </div>
+  <div class="hint">Move to blow · Click to spray</div>
 </div>
 
-<div class="marquee" aria-hidden="true"><div class="track">
-  <span>Wholesale <b>✺</b></span><span>E-commerce <b>✺</b></span><span>Brand growth <b>✺</b></span><span>Operations <b>✺</b></span><span>AI workflows <b>✺</b></span>
-  <span>Wholesale <b>✺</b></span><span>E-commerce <b>✺</b></span><span>Brand growth <b>✺</b></span><span>Operations <b>✺</b></span><span>AI workflows <b>✺</b></span>
-</div></div>
+<section id="formula"><div class="wrap">
+  <div class="kicker rv">The formula</div>
+  <h2 class="rv">Every perfume is built <i>in layers.</i><br>So is a career.</h2>
+  <p class="intro rv">Ez sells fragrance, so here he is written as one. Top notes are what you notice first. Heart notes are the work. Base notes are what stays after everything else has faded. Scroll slowly and watch the top notes evaporate first.</p>
 
-<section id="about" class="about pad">
-  <div class="label"><span><b>01</b> — About</span><span>The short version</span></div>
-  <h2 class="rv">A growth operator who works across <em>the whole</em> business.</h2>
-  <div class="cols">
-    <div class="rv"><div class="n">A</div><h3>Growth operator</h3><p>Improves how businesses market, sell, communicate and execute.</p></div>
-    <div class="rv"><div class="n">B</div><h3>Cross-functional</h3><p>Campaigns, wholesale accounts, pricing, launches, systems, all in the same week.</p></div>
-    <div class="rv"><div class="n">C</div><h3>Multicultural</h3><p>Brings together U.S. business practice and Arab and Middle Eastern brands and communities.</p></div>
-    <div class="rv"><div class="n">D</div><h3>AI-enabled</h3><p>Uses generative AI heavily to research, write and ship faster.</p></div>
+  <div class="pyr">
+    <div class="tier" data-evap="1.6">
+      <h3>Top notes<small>First impression</small></h3>
+      <div class="chips"><span class="chip">Bilingual · Arabic & English</span><span class="chip">Fast</span><span class="chip">Curious</span><span class="chip">Hands-on</span><span class="chip">AI-native</span></div>
+    </div>
+    <div class="tier" data-evap="0.8">
+      <h3>Heart notes<small>The work</small></h3>
+      <div class="notes">
+        <div class="note"><b>Brothers Wholesale</b><span>Business Development & Marketing</span><p>Works with leadership across sales, warehouse, accounting and marketing at a busy Indianapolis distributor. Helped define reporting for an ERP rollout, and wrote order policies and customer communication.</p></div>
+        <div class="note"><b>Marsa</b><span>Founder · E-commerce & Wholesale</span><p>Built a multi-channel business selling Arabic and Middle Eastern fragrances across its own sites, TikTok Shop, Amazon, a wholesale portal and a WhatsApp community. The catalog has 140+ fragrances.</p></div>
+        <div class="note"><b>Fragrance & Beauty</b><span>Retail · Marketing</span><p>Marketing and business development in the Saudi beauty market, and running a fragrance store.</p></div>
+        <div class="note"><b>Digital Media</b><span>Advocacy campaigns</span><p>Content, campaign planning and coordination with stakeholders for advocacy work.</p></div>
+      </div>
+    </div>
+    <div class="tier" data-evap="0">
+      <h3>Base notes<small>What lasts</small></h3>
+      <div class="chips"><span class="chip">Relationships that hold</span><span class="chip">Systems that work</span><span class="chip">Honest positioning</span><span class="chip">Across cultures</span></div>
+    </div>
   </div>
-</section>
+</div></section>
 
-<section id="work" class="pad">
-  <div class="label"><span><b>02</b> — Selected work</span><span>Hover to open</span></div>
-  <a class="row" href="#work">
-    <span class="i">(01)</span><h3 class="big">Brothers Wholesale</h3><span class="t">Business Development<br>& Marketing</span>
-    <div class="d"><ul>
-      <li>Works with leadership across sales, warehouse, accounting and marketing at a busy Indianapolis wholesale distributor.</li>
-      <li>Helped define reporting for an ERP rollout: inactive customers, top products by store, inventory visibility and UPC gaps.</li>
-      <li>Helped write and roll out order and delivery policies, hiring announcements and customer communication.</li>
-    </ul></div>
-  </a>
-  <a class="row" href="#work">
-    <span class="i">(02)</span><h3 class="big">Marsa</h3><span class="t">Founder<br>E-commerce & Wholesale</span>
-    <div class="d"><ul>
-      <li>Built a multi-channel business selling Arabic and Middle Eastern fragrances to U.S. shoppers and retailers.</li>
-      <li>Sells across its own websites, TikTok Shop, Amazon, a wholesale portal and a WhatsApp community, with 140+ fragrances.</li>
-      <li>Runs brand launches, short-form video, wholesale programs, vendor and packaging coordination, and marketplace economics.</li>
-    </ul></div>
-  </a>
-  <a class="row" href="#work">
-    <span class="i">(03)</span><h3 class="big">Fragrance & Beauty</h3><span class="t">Retail<br>Marketing</span>
-    <div class="d"><ul>
-      <li>Marketing and business development in the Saudi beauty market.</li>
-      <li>Managed a fragrance store, working on product discovery, customer service and retail sales.</li>
-    </ul></div>
-  </a>
-  <a class="row" href="#work">
-    <span class="i">(04)</span><h3 class="big">Digital Media</h3><span class="t">Advocacy<br>Civil Society</span>
-    <div class="d"><ul>
-      <li>Digital media management for advocacy campaigns, including content, campaign planning and coordination with stakeholders.</li>
-    </ul></div>
-  </a>
-</section>
+<section id="lab"><div class="wrap">
+  <div class="kicker rv">The lab</div>
+  <h2 class="rv">Formulate <i>your hire.</i></h2>
+  <p class="intro rv">Choose up to three notes your team needs. Ez gets blended to match, and you can take the formula card with you.</p>
 
-<section id="skills" class="pad">
-  <div class="label"><span><b>03</b> — Toolkit</span><span>What he brings</span></div>
-  <div class="skills rv">
-    <span>Business development</span><span>Wholesale & B2B</span><span>E-commerce</span><span>TikTok Shop</span><span>Amazon</span>
-    <span>Brand positioning</span><span>Short-form video</span><span>Copywriting</span><span>Arabic / English</span>
-    <span>Campaigns</span><span>ERP & process</span><span>Vendors</span><span>Market research</span><span>Community</span><span>Generative AI</span>
+  <div class="lab">
+    <div>
+      <div class="picker" id="picker"></div>
+      <p class="rule" id="rule">Pick 1 to 3 notes.</p>
+      <div class="pitch" aria-live="polite" id="pitch">
+        <h4>An empty bottle is <em>full of potential.</em></h4>
+        <p>Your blend will appear here.</p>
+      </div>
+      <div class="actions">
+        <button class="btn solid" id="dl" disabled>Download formula card</button>
+        <button class="btn ghost" id="reset">Empty the bottle</button>
+      </div>
+    </div>
+    <div class="bottle-wrap" aria-hidden="true">
+      <div class="cap-top"></div><div class="neck"></div>
+      <div class="bottle">
+        <div class="shine"></div>
+        <div class="bubbles" id="bubbles"></div>
+        <div class="liquid" id="liquid"></div>
+        <div class="wave" id="wave" style="bottom:-30px"></div>
+        <div class="label"><div class="no" id="lno">Ez · No. 0</div><div class="nm" id="lnm">Eau de Ez</div><div class="ar">عز</div></div>
+      </div>
+    </div>
   </div>
-</section>
+</div></section>
 
-<section id="contact" class="contact pad">
-  <div class="label"><span><b>04</b> — Contact</span><span>Open to roles & partnerships</span></div>
-  <h2 class="big rv">Let’s<br>talk.</h2>
-  <a class="go" href="https://www.linkedin.com/search/results/all/?keywords=Ezaldeen%20Abushaar" target="_blank" rel="noopener">Find Ez on LinkedIn <span>→</span></a>
-</section>
+<section id="contact" class="contact"><div class="wrap">
+  <div class="kicker rv">Sillage</div>
+  <h2 class="rv">Leave a <i>trace.</i></h2>
+  <p class="intro rv">“Sillage” is the trail a scent leaves behind after someone walks through a room. Open to business development, marketing, e-commerce and operations roles, and to partnerships with brands growing in the U.S.</p>
+  <div class="actions rv"><a class="btn solid" href="https://www.linkedin.com/search/results/all/?keywords=Ezaldeen%20Abushaar" target="_blank" rel="noopener">Find Ez on LinkedIn</a><a class="btn ghost" href="#lab">Formulate a hire</a></div>
+</div></section>
 </main>
 
-<footer class="pad"><span>© <span id="y"></span> Ezaldeen Abushaar</span><span>Indianapolis, Indiana</span></footer>
+<footer><span>© <span id="y"></span> Ezaldeen Abushaar · Indianapolis</span><span>Composed in four notes</span></footer>
 
 <script>
-document.getElementById('y').textContent=new Date().getFullYear();
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-const c=document.getElementById('cur');let x=0,y=0,cx=0,cy=0;
-addEventListener('mousemove',e=>{x=e.clientX;y=e.clientY});
-(function loop(){cx+=(x-cx)*.2;cy+=(y-cy)*.2;c.style.transform=`translate(${cx}px,${cy}px) translate(-50%,-50%)`;requestAnimationFrame(loop)})();
-document.querySelectorAll('a,.row,.skills span').forEach(el=>{el.addEventListener('mouseenter',()=>c.classList.add('on'));el.addEventListener('mouseleave',()=>c.classList.remove('on'))});
-document.querySelectorAll('.row').forEach(r=>r.addEventListener('click',e=>{e.preventDefault();r.classList.toggle('open')}));
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.getElementById('y').textContent = new Date().getFullYear();
+
+/* ---------- reveal ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* ---------- smoke name: عز <-> EZ ---------- */
+(function () {
+  const cv = document.getElementById('smoke'), cx = cv.getContext('2d');
+  let W, H, DPR, parts = [], targets = [[], []], which = 0, mouse = { x: -9999, y: -9999 };
+  const COLS = ['#e8b04b', '#f4efe6', '#e86a5a', '#d9a0ff'];
+  function sample(text, font) {
+    const o = document.createElement('canvas'); o.width = W; o.height = H;
+    const c = o.getContext('2d'); c.fillStyle = '#fff'; c.textAlign = 'center'; c.textBaseline = 'middle';
+    c.font = font; c.fillText(text, W / 2, H * 0.44);
+    const d = c.getImageData(0, 0, W, H).data, pts = [], gap = Math.max(4, Math.round(W / 260));
+    for (let y = 0; y < H; y += gap) for (let x = 0; x < W; x += gap) if (d[(y * W + x) * 4 + 3] > 128) pts.push([x, y]);
+    return pts;
+  }
+  function build() {
+    DPR = Math.min(devicePixelRatio || 1, 2);
+    W = cv.clientWidth; H = cv.clientHeight; cv.width = W * DPR; cv.height = H * DPR; cx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    const s = Math.min(W * 0.42, H * 0.62);
+    targets[0] = sample('عز', `700 ${s}px "Reem Kufi"`);
+    targets[1] = sample('EZ', `400 ${s * 1.05}px "Instrument Serif"`);
+    const n = Math.max(targets[0].length, targets[1].length);
+    while (parts.length < n) parts.push({ x: Math.random() * W, y: Math.random() * H, vx: 0, vy: 0, c: COLS[Math.random() * 4 | 0], r: Math.random() * 1.4 + .6, j: Math.random() * 6.28 });
+    parts.length = n;
+  }
+  function tick(t) {
+    cx.fillStyle = 'rgba(11,10,15,.28)'; cx.fillRect(0, 0, W, H);
+    const tg = targets[which], L = tg.length;
+    for (let i = 0; i < parts.length; i++) {
+      const p = parts[i];
+      let tx, ty;
+      if (i < L) { tx = tg[i][0]; ty = tg[i][1]; }
+      else { tx = W / 2 + Math.cos(p.j + t / 3000) * W * .45; ty = H * .44 + Math.sin(p.j * 1.7 + t / 2600) * H * .4; } // spare particles drift as vapor
+      const dx = p.x - mouse.x, dy = p.y - mouse.y, d2 = dx * dx + dy * dy;
+      if (d2 < 14000) { const f = (14000 - d2) / 14000 * 3.2; p.vx += dx / Math.sqrt(d2 + 1) * f; p.vy += dy / Math.sqrt(d2 + 1) * f; }
+      p.vx += (tx - p.x) * 0.012 + Math.sin(t / 900 + p.j) * .05;
+      p.vy += (ty - p.y) * 0.012 - 0.02;
+      p.vx *= .86; p.vy *= .86; p.x += p.vx; p.y += p.vy;
+      cx.globalAlpha = i < L ? .9 : .25; cx.fillStyle = p.c;
+      cx.beginPath(); cx.arc(p.x, p.y, p.r, 0, 6.283); cx.fill();
+    }
+    cx.globalAlpha = 1;
+    requestAnimationFrame(tick);
+  }
+  function spray(x, y) { for (const p of parts) { const a = Math.random() * 6.28, v = Math.random() * 22; if (Math.hypot(p.x - x, p.y - y) < 260) { p.vx += Math.cos(a) * v; p.vy += Math.sin(a) * v; } } }
+  cv.addEventListener('pointermove', e => { const r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
+  cv.addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999; });
+  cv.addEventListener('click', e => { const r = cv.getBoundingClientRect(); spray(e.clientX - r.left, e.clientY - r.top); which ^= 1; });
+  let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(build, 200); });
+  document.fonts.ready.then(() => {
+    build();
+    if (RM) { which = 0; for (let i = 0; i < parts.length; i++) if (targets[0][i]) [parts[i].x, parts[i].y] = targets[0][i]; }
+    cx.fillStyle = '#0b0a0f'; cx.fillRect(0, 0, W, H);
+    requestAnimationFrame(tick);
+    if (!RM) setInterval(() => { which ^= 1; }, 4200);
+  });
+})();
+
+/* ---------- evaporating pyramid ---------- */
+(function () {
+  const tiers = [...document.querySelectorAll('.tier')];
+  function onScroll() {
+    const vh = innerHeight;
+    for (const t of tiers) {
+      const k = +t.dataset.evap; if (!k || RM) continue;
+      const r = t.getBoundingClientRect();
+      const prog = Math.min(1, Math.max(0, (vh * 0.35 - r.bottom) / (vh * 0.5))) * k; // starts when tier passes upper third
+      t.style.filter = `blur(${prog * 6}px)`; t.style.opacity = 1 - Math.min(.85, prog * .6); t.style.transform = `translateY(${-prog * 40}px)`;
+    }
+  }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+})();
+
+/* ---------- sillage cursor trail ---------- */
+(function () {
+  if (RM || matchMedia('(hover:none)').matches) return;
+  const cv = document.getElementById('trail'), c = cv.getContext('2d'); let W, H, D;
+  const glyphs = 'EZعزEZعز·'.split(''), bits = [];
+  function size() { D = Math.min(devicePixelRatio || 1, 2); W = innerWidth; H = innerHeight; cv.width = W * D; cv.height = H * D; c.setTransform(D, 0, 0, D, 0, 0); }
+  size(); addEventListener('resize', size);
+  let last = 0;
+  addEventListener('pointermove', e => {
+    const now = performance.now(); if (now - last < 45) return; last = now;
+    bits.push({ x: e.clientX, y: e.clientY, g: glyphs[Math.random() * glyphs.length | 0], a: .55, s: 10 + Math.random() * 8, vy: -.3 - Math.random() * .5, vx: (Math.random() - .5) * .6 });
+    if (bits.length > 60) bits.shift();
+  });
+  (function loop() {
+    c.clearRect(0, 0, W, H);
+    for (const b of bits) {
+      b.x += b.vx; b.y += b.vy; b.a *= .965;
+      c.globalAlpha = b.a; c.fillStyle = '#e8b04b'; c.font = `${b.s}px "Reem Kufi","Instrument Serif"`; c.fillText(b.g, b.x, b.y);
+    }
+    requestAnimationFrame(loop);
+  })();
+})();
+
+/* ---------- formulate your hire ---------- */
+(function () {
+  const NOTES = [
+    { id: 'wh', c: '#e8b04b', label: 'Wholesale growth', short: 'Wholesale', ar: 'جملة', line: 'He has worked inside a busy Indianapolis distributor across sales, warehouse, accounting and marketing, so he knows how B2B accounts actually run.' },
+    { id: 'ec', c: '#e86a5a', label: 'E-commerce', short: 'Commerce', ar: 'تجارة', line: 'He built a multi-channel fragrance business across its own websites, TikTok Shop, Amazon and a wholesale portal.' },
+    { id: 'br', c: '#c084fc', label: 'Brand & content', short: 'Storytelling', ar: 'قصة', line: 'He writes hooks, short-form video scripts and campaigns in both English and Arabic.' },
+    { id: 'op', c: '#5eead4', label: 'Operations', short: 'Systems', ar: 'نظام', line: 'He turns messy processes into clear policies, and helped define the reporting for an ERP rollout.' },
+    { id: 'ai', c: '#93c5fd', label: 'AI workflows', short: 'Intelligence', ar: 'ذكاء', line: 'He uses generative AI every day to research, draft and ship faster.' },
+    { id: 'am', c: '#f472b6', label: 'Arab & Middle Eastern markets', short: 'Bridges', ar: 'جسور', line: 'He connects U.S. business with Arab and Middle Eastern brands, customers and communities.' },
+  ];
+  const picker = document.getElementById('picker'), liquid = document.getElementById('liquid'), wave = document.getElementById('wave');
+  const pitch = document.getElementById('pitch'), dl = document.getElementById('dl'), rule = document.getElementById('rule');
+  const lno = document.getElementById('lno'), lnm = document.getElementById('lnm');
+  let sel = [];
+  NOTES.forEach((n, i) => {
+    const b = document.createElement('button'); b.className = 'pick'; b.style.setProperty('--c', n.c); b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<i></i>${n.label}`; b.onclick = () => toggle(i, b); picker.appendChild(b);
+    const l = document.createElement('div'); l.className = 'layer'; l.style.background = n.c; l.dataset.i = i; liquid.appendChild(l);
+  });
+  const bub = document.getElementById('bubbles');
+  for (let i = 0; i < 14; i++) { const s = document.createElement('span'); s.style.left = (10 + Math.random() * 80) + '%'; s.style.animationDuration = (3 + Math.random() * 4) + 's'; s.style.animationDelay = (-Math.random() * 6) + 's'; s.style.opacity = 0; bub.appendChild(s); }
+  function toggle(i, b) {
+    const k = sel.indexOf(i);
+    if (k > -1) sel.splice(k, 1);
+    else { if (sel.length === 3) { rule.textContent = 'Three notes is the limit. A good perfume knows when to stop.'; return; } sel.push(i); }
+    b.setAttribute('aria-pressed', k > -1 ? 'false' : 'true');
+    rule.textContent = sel.length ? `${sel.length} of 3 notes chosen.` : 'Pick 1 to 3 notes.';
+    render();
+  }
+  function name() {
+    if (!sel.length) return { no: 0, nm: 'Eau de Ez' };
+    const no = sel.reduce((a, i) => a * 7 + i + 1, 0) % 97 + 1;
+    const nm = sel.length === 1 ? `Eau de ${NOTES[sel[0]].short}` : `${NOTES[sel[0]].short} & ${NOTES[sel[sel.length - 1]].short}`;
+    return { no, nm };
+  }
+  function render() {
+    const total = 300, per = sel.length ? total / 3 : 0, full = per * sel.length;
+    [...liquid.children].forEach(l => { const on = sel.indexOf(+l.dataset.i); l.style.height = on > -1 ? per + 'px' : '0px'; l.style.order = on > -1 ? on : 9; });
+    wave.style.bottom = (sel.length ? full - 12 : -30) + 'px';
+    wave.style.background = sel.length ? NOTES[sel[sel.length - 1]].c + '88' : 'rgba(255,255,255,.18)';
+    [...bub.children].forEach(s => { s.style.opacity = sel.length ? 1 : 0; });
+    const { no, nm } = name(); lno.textContent = `Ez · No. ${no}`; lnm.textContent = nm;
+    if (!sel.length) { pitch.innerHTML = '<h4>An empty bottle is <em>full of potential.</em></h4><p>Your blend will appear here.</p>'; dl.disabled = true; return; }
+    const lines = sel.map(i => NOTES[i].line).join(' ');
+    pitch.innerHTML = `<h4>Ez No. ${no}: <em>${nm}.</em></h4><p>A blend of ${sel.map(i => NOTES[i].label.toLowerCase().replace(/^ai /,'AI ').replace('arab & middle eastern','Arab & Middle Eastern')).join(', ').replace(/, ([^,]*)$/, ' and $1')}. ${lines}</p>`;
+    dl.disabled = false;
+  }
+  document.getElementById('reset').onclick = () => { sel = []; picker.querySelectorAll('.pick').forEach(b => b.setAttribute('aria-pressed', 'false')); rule.textContent = 'Pick 1 to 3 notes.'; render(); };
+
+  function wrap(c, text, x, y, maxW, lh) {
+    const words = text.split(' '); let line = '';
+    for (const w of words) { const t = line + w + ' '; if (c.measureText(t).width > maxW && line) { c.fillText(line, x, y); line = w + ' '; y += lh; } else line = t; }
+    c.fillText(line, x, y); return y;
+  }
+  dl.onclick = () => {
+    const W = 1080, H = 1350, cv = document.createElement('canvas'); cv.width = W; cv.height = H; const c = cv.getContext('2d');
+    c.fillStyle = '#0b0a0f'; c.fillRect(0, 0, W, H);
+    sel.forEach((i, k) => { const g = c.createRadialGradient(W * (.25 + k * .25), H * .3, 0, W * (.25 + k * .25), H * .3, 520); g.addColorStop(0, NOTES[i].c + '66'); g.addColorStop(1, 'transparent'); c.fillStyle = g; c.fillRect(0, 0, W, H); });
+    c.strokeStyle = 'rgba(232,176,75,.7)'; c.lineWidth = 2; c.strokeRect(50, 50, W - 100, H - 100);
+    const { no, nm } = name();
+    c.fillStyle = '#e8b04b'; c.font = '500 26px "Space Grotesk"'; c.textAlign = 'center'; c.fillText(`FORMULA CARD · EZ No. ${no}`, W / 2, 140);
+    c.fillStyle = '#f4efe6'; c.font = '700 260px "Reem Kufi"'; c.fillText('عز', W / 2, 430);
+    c.font = '96px "Instrument Serif"'; c.fillText(nm, W / 2, 580);
+    let y = 690; c.font = '500 24px "Space Grotesk"';
+    sel.forEach(i => { c.fillStyle = NOTES[i].c; c.beginPath(); c.arc(W / 2 - 230, y - 8, 10, 0, 6.28); c.fill(); c.fillStyle = '#f4efe6'; c.textAlign = 'left'; c.fillText(NOTES[i].label.toUpperCase(), W / 2 - 205, y); c.textAlign = 'right'; c.fillStyle = '#e8b04b'; c.font = '700 26px "Reem Kufi"'; c.fillText(NOTES[i].ar, W / 2 + 240, y); c.font = '500 24px "Space Grotesk"'; y += 52; });
+    c.textAlign = 'left'; c.fillStyle = '#b8b0a3'; c.font = '28px "Space Grotesk"';
+    wrap(c, sel.map(i => NOTES[i].line).join(' '), 120, y + 40, W - 240, 42);
+    c.textAlign = 'center'; c.fillStyle = '#f4efe6'; c.font = 'italic 40px "Instrument Serif"'; c.fillText('Ezaldeen “Ez” Abushaar', W / 2, H - 150);
+    c.fillStyle = '#9a9388'; c.font = '22px "Space Grotesk"'; c.fillText('BUSINESS DEVELOPMENT & MARKETING · INDIANAPOLIS', W / 2, H - 105);
+    const a = document.createElement('a'); a.download = `ez-no-${no}.png`; a.href = cv.toDataURL('image/png'); a.click();
+  };
+})();
 </script>
 </body>
 </html>
